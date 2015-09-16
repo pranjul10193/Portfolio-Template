@@ -1,4 +1,4 @@
- //
+//
 // Carousel
 // --------------------------------------------------
 
@@ -6,9 +6,9 @@
 // Wrapper for the slide container and indicators
 .carousel {
   position: relative;
-  padding-top:40x;//added
-  padding-bottom:28px;//added
-  background-color:@gray-lighter;//added
+  padding-top:4px;
+  padding-bottom:28px;
+  background-color:@gray-lighter;
 }
 
 .carousel-inner {
@@ -19,21 +19,21 @@
   > .item {
     display: none;
     position: relative;
+    max-height:640px;
     .transition(.6s ease-in-out left);
-     max-height:600px;//added
 
     // Account for jankitude on images
     > img,
     > a > img {
       &:extend(.img-responsive);
       line-height: 1;
-      min-width:100%;//added
-      @media (min-width: @screen-md-min) {
-          margin-top: -40px;//added
-        }
-      @media (min-width: @screen-lg-min) {
-          margin-top: -60px;
-        }//added
+      min-width:100%;
+      @media (min-width:@screen-md-min){
+        margin-top:-40px;
+      }
+      @media(min-width:@screen-lg-min){
+        margin-top:-60px;
+      }
     }
 
     // WebKit CSS3 transforms for supported devices
@@ -183,8 +183,8 @@
 
 .carousel-indicators {
   position: absolute;
-  bottom: 0;//edited
-  margin-bottom:0;//added
+  bottom: 0px;
+  margin-bottom:0px;
   left: 50%;
   z-index: 15;
   width: 60%;
