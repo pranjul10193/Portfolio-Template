@@ -19,6 +19,18 @@
 <script src="js/vendor/respond.min.js"></script>
 <![endif]--> 
         <title>Portfolio</title>
+        <style type="text/css">
+        .mdp{
+            @media(min-width: @screen-md-min){
+                margin-top:-60px;
+            }
+        }
+        .lgp{
+            @media(min-width: @screen-lg-min){
+                margin-top:-80px;
+            }
+        }
+        </style>
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -71,13 +83,13 @@
                 </ol>
                 <div class="carousel-inner">
                     <div class="item active">
-                        <img src="img/DSC02319.JPG" alt="friends">
+                        <img src="img/DSC02319.JPG" class="lgp mdp" alt="friends">
                     </div>
                     <div class="item">
                         <img src="img/DSC02209.JPG" alt="site-seeing">
                     </div>
                     <div class="item">
-                        <img src="img/DSC02225.JPG" alt="loved-ones">
+                        <img  src="img/DSC02225.JPG" alt="loved-ones">
                     </div>
                 </div>
                 <a class="left carousel-control" href="#mycarousel" role="button"data-slide="prev"> 

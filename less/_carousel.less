@@ -7,7 +7,7 @@
 .carousel {
   position: relative;
   padding-top:0px;
-  padding-bottom:28px;
+  padding-bottom:25px;
   background-color:@gray-lighter;
 }
 
@@ -19,20 +19,21 @@
   > .item {
     display: none;
     position: relative;
-    max-height:640px;
+    max-height:630px;
     .transition(.6s ease-in-out left);
 
     // Account for jankitude on images
     > img,
     > a > img {
+      position:relative;
       &:extend(.img-responsive);
       line-height: 1;
       min-width:100%;
       @media (min-width:@screen-md-min){
-        margin-top:-40px;
+        margin-top:-45px;
       }
       @media(min-width:@screen-lg-min){
-        margin-top:-60px;
+        margin-top:-65px;
       }
     }
 
@@ -183,8 +184,8 @@
 
 .carousel-indicators {
   position: absolute;
-  bottom: 0px;
-  margin-bottom:0px;
+  bottom: 0px;//edited
+  margin-bottom:0px;//added
   left: 50%;
   z-index: 15;
   width: 60%;
@@ -195,11 +196,12 @@
 
   li {
     display: inline-block;
-    width:  10px;
-    height: 10px;
-    margin: 1px;
+    width:  18px;//edited
+    height: 18px;//edited
+   // margin: 1px;//edited
     text-indent: -999px;
-    border: 1px solid @carousel-indicator-border-color;
+    background-color:@carousel-indicator-bg;
+    //border: 1px solid @carousel-indicator-border-color;//edited
     border-radius: 10px;
     cursor: pointer;
 
@@ -212,13 +214,14 @@
     //
     // For IE8, we set solid black as it doesn't support `rgba()`. For IE9, we
     // set alpha transparency for the best results possible.
-    background-color: #000 \9; // IE8
-    background-color: rgba(0,0,0,0); // IE9
+    //background-color: #000 \9; // IE8
+    //background-color: rgba(0,0,0,0); // IE9 //edited-as we supplied bg, bg active colors manually, no need of this hack
   }
-  .active {
-    margin: 0;
-    width:  12px;
-    height: 12px;
+  .active ,
+  :hover{
+   // margin: 0;//edited
+   // width:  12px;//edited-as we no longer want our indicators to grow in size
+   // height: 12px;//edited
     background-color: @carousel-indicator-active-bg;
   }
 }
