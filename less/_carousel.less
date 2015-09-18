@@ -6,8 +6,8 @@
 // Wrapper for the slide container and indicators
 .carousel {
   position: relative;
-  padding-top:0px;
-  padding-bottom:25px;
+  padding-top:15px;//not shown becaz it hides behind fixed navbar
+  padding-bottom:15px;
   background-color:@gray-lighter;
 }
 
@@ -19,7 +19,10 @@
   > .item {
     display: none;
     position: relative;
-    max-height:655px;
+    
+    max-height:630px;
+    
+
     .transition(.6s ease-in-out left);
 
     // Account for jankitude on images
@@ -30,12 +33,13 @@
       line-height: 1;
       min-width:100%;
       
-      @media (min-width:@screen-md-min){
-        margin-top:0px;
+      @media (min-width:@screen-md-min){//added
+        margin-top:10px;
 
       }
-      @media(min-width:@screen-lg-min){
-        margin-top:-20px; 
+      @media(min-width:@screen-lg-min){//added in case of fixed navbar,already some portion will be eaten by it ,so give small 
+      //amt of -ve margin.
+        margin-top:-10px; 
       }
     }
 
@@ -188,6 +192,7 @@
   position: absolute;
   bottom: 0px;//edited
   margin-bottom:0px;//added
+  padding-bottom:0px;//added
   left: 50%;
   z-index: 15;
   width: 60%;
@@ -198,8 +203,8 @@
 
   li {
     display: inline-block;
-    width:  18px;//edited
-    height: 18px;//edited
+    width:  10px;//edited
+    height: 10px;//edited
    // margin: 1px;//edited
     text-indent: -999px;
     background-color:@carousel-indicator-bg;
