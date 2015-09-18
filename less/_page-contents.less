@@ -2,16 +2,24 @@
 //-----------------------------------------------------------------------------
 //creating sensible class and adding padding to our content
 .page-content{
-	padding-top:30px;
-	padding-bottom:20px;
+	background-color:#eaffad;
+	padding-top:50px;
+	padding-bottom:0px;
 	
+@media(min-width:@screen-sm-min){
+	height:700px;
+}
 
 @media (max-width: @screen-xs-max) {
+height:1200px;
 [class*="col-"] {
 clear: both;
 padding-bottom: 40px;
 }
 
+}
+.section{
+	margin-top:70px;	
 }
 }
  
