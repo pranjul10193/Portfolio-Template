@@ -7,6 +7,8 @@
 	padding-bottom:0px;
 .home-page{
 	background-color:#b4d119;
+	border-radius:10px;
+	border:1px solid #90a714;
 	 margin-top:30px;
 	 padding-top:15px;
 	 height:250px;
@@ -22,14 +24,14 @@
 	
 	
 @media(min-width:@screen-sm-min){
-	height:600px;
+	height:650px;
 .section{
 	margin-top:70px;	
 }	
 }
 
 @media (max-width: @screen-xs-max) {
-height:1100px;
+height:1150px;
 [class*="col-"] {
 clear: both;
 padding-top:20px;
@@ -38,5 +40,34 @@ padding-bottom: 40px;
 
 }
 
+}
+.project-list{
+	background-color:#bbd52f;
+	@media(min-width:@screen-sm-min){
+	height:650px;
+	
+	}
+	@media (max-width: @screen-xs-max) {
+    height:1100px;
+    [class*="col-"] {
+		clear: both;
+		padding-top:20px;
+		padding-bottom: 30px;
+	}
+
+    }
+    padding-top:30px;
+    padding-bottom:0px;
+        
+    >.portfolio-head{
+    	margin-top:50px;
+    	margin-bottom:0px;
+    	}
+    [class*="col-"]{
+    	padding-top:30px;
+    	>.description{
+    		padding-top:20px;
+    	}
+    }
 }
  
