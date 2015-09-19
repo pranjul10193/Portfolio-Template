@@ -236,28 +236,49 @@
 // Optional captions
 // -----------------------------
 // Hidden by default for smaller viewports
-@media (min-width:@screen-sm-min){//edited and added
+@media (min-width:@screen-md-min){//edited and added
 .carousel-caption {
   position: absolute;
   left: 15%;
   right: 15%;
-  top:60px;//edited or you can add top property
+  top:60px;//edited or you can add bottom property
   z-index: 10;
   padding-top: 20px;
   padding-bottom: 20px;
   color: @carousel-caption-color;
-  font-size:16px;//added
+  font-size:@font-size-large;//added
   text-align: center;
   text-shadow: @carousel-text-shadow;
   & .btn {
+    .button-size(@padding-large-vertical; @padding-large-horizontal; @font-size-large; @line-height-large; @btn-border-radius-large);
     margin-top:20px;//added
     text-shadow: none; // No shadow for button elements in carousel-caption
   }
  }
 }
-@media(max-width:@screen-xs-max){
+
+@media(max-width:@screen-xs-max){//added
   .carousel-caption{
-    display:none;
+  display:none;}
+  }
+
+
+@media(max-width:@screen-sm-max){//added
+  .carousel-caption{
+    position:absolute;
+    font-size:@font-size-small;
+    padding-top:5px;
+    padding-bottom:5px;
+    top:5%;
+    text-align:center;
+    color:@carousel-caption-color;
+    z-index:10;
+    left:15%;
+    right:15%;
+    >.btn,.btn-primary{
+      .button-size(@padding-small-vertical; @padding-small-horizontal; @font-size-small; @line-height-small; @btn-border-radius-small);
+    }
+
   }
 }
 
