@@ -14,29 +14,32 @@
   border-radius: @thumbnail-border-radius;
   .transition(border .2s ease-in-out);
   max-height:400px;//added
+  position:relative;//added
 
-  > img,
-  a > img {
+  > img,a 
+    > img {
     &:extend(.img-responsive);
     margin-left: auto;
     margin-right: auto;
     border-radius: @thumbnail-border-radius;//added
-    width:100%;
+    width:100%;//added
   }
 
   // Add a hover state for linked versions only
   a&:hover,
-  a&:focus//edited,
-  //a&.active //edited
+  a&:focus,
+  a&.active
   {
-    border:5px solid @link-color;//added
-    //border-color: @link-color;//edited
-    opacity:0.5;
+    
+    border-color: @link-color;
   }
 
   // Image captions
   .caption {
     padding: @thumbnail-caption-padding;
     color: @thumbnail-caption-color;
+    position:absolute;
+    top:50%;
+    right:35%;
   }
 }
