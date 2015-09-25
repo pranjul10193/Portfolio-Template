@@ -91,8 +91,9 @@ padding-bottom: 50px;
     
 }
 .team-list{
-	margin-top:10px;
-	padding-top:5px;
+	padding-top:20px;
+	background-color:#e7f4a5;
+	min-height:570px;
 	>.team-head{
 		margin-top:10px;
 		margin-bottom:10px;
@@ -105,21 +106,29 @@ padding-bottom: 50px;
 	>.container{
 		padding-top:10px;
 		padding-bottom:10px;
-		min-height:200px;
+		
+		@media (max-width:@screen-xs-max){
+		[class*="col-"]{
+			margin-bottom:40px;
+			}
 		>.thumbnail{
 			margin-right:5px;
 			margin-left:5px;
+			margin-top:10px;
+			margin-bottom:10px;
 		 }
 		>.collapse{
 			margin-top:20px;
-			margin-bottom:20px;
+			margin-bottom:30px;
 			padding-top:20px;
 			padding-bottom:20px;
+			align-content:center;
 			>p{
 				text-align:center;
 				margin-top:20px;
 				padding-top:10px;
 			}
+		}	
 		}
 	}	
 }
